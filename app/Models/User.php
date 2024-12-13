@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'type',
     ];
 
     /**
@@ -43,6 +44,22 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+        ];
+    }
+    const TYPE_USER = 'user';
+    const TYPE_TEACHER = 'teacher';
+    const TYPE_CONSULTANT = 'consultant';
+    const TYPE_PEDIATRICIAN = 'pediatrician';
+    const TYPE_PSYCHOLOGIST = 'psychologist';
+
+    public static function getTypes()
+    {
+        return [
+            self::TYPE_USER,
+            self::TYPE_TEACHER,
+            self::TYPE_CONSULTANT,
+            self::TYPE_PEDIATRICIAN,
+            self::TYPE_PSYCHOLOGIST,
         ];
     }
 }

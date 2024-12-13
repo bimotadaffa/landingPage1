@@ -32,6 +32,7 @@ class Register extends Component
             'name' => $this->name,
             'email' => $this->email,
             'password' => bcrypt($this->password),
+            'type' => User::TYPE_USER,
         ]);
         Auth::login($user, true);
         return redirect()->to('/home');

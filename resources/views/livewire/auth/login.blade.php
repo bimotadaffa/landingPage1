@@ -32,6 +32,7 @@
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Masuk</button>
                         </div>
+                        <a href="{{ route('password.request') }}" class="d-block text-primary">Forget Passwotd?</a>
                         <a href="{{ route('register') }}" class="text-primary">Dont have account?</a>
                     </form>
                 </div>
